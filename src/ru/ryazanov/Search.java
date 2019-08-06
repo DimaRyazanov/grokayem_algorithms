@@ -1,7 +1,7 @@
 package ru.ryazanov;
 
-public class Search {
-    public static int binarySearch(int[] list, int item) {
+class Search {
+    static int binarySearch(int[] list, int item) {
         int low = 0;
         int high = list.length - 1;
 
@@ -19,6 +19,6 @@ public class Search {
 
         }
 
-        return -1;
+        return Integer.MIN_VALUE;
     }
 }
