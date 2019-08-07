@@ -1,5 +1,7 @@
 package ru.ryazanov;
 import java.util.Arrays;
+import java.util.Map;
+import java.util.Set;
 
 public class Main {
 
@@ -21,5 +23,14 @@ public class Main {
 
         int[] list3 = {2, 0, 12, 5, 12, 33, 45, 64, 3, 9, 5, 6, 7};
         System.out.println("Recursion quick sort array " + Arrays.toString(list3) + " - " + Arrays.toString(Recursion.quickSort(list3)));
+
+        Set statesNeeded = Set.of("mt", "wa", "or", "id", "nv", "ut", "ca", "az");
+        Map stations = Map.of("kone", Set.of("id", "nv", "ut"),
+                            "ktwo", Set.of("wa", "id", "mt"),
+                            "kthree", Set.of("or", "nv", "ca"),
+                            "kfour", Set.of("nv", "ut"),
+                            "kfive", Set.of("ca", "az"));
+
+        System.out.println("Greedy algorithm - find stations: result - " + GreedyAlgorithms.findStations(statesNeeded, stations) + " stations");
     }
 }
